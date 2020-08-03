@@ -8,7 +8,11 @@ runs:
     using: "composite"
     steps: 
         - run: echo hello ${{inputs.your_name}}
+          shell: bash
         - run: echo sha ${{github.sha}}
+          shell: bash
         - run: echo os ${{runner.os}}
+          shell: bash
         - run: |
             echo job index ${{ strategy.job-index }}
+          shell: bash
